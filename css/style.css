@@ -1,0 +1,104 @@
+body
+{
+  text-align:center;
+  position:relative;
+}
+em
+{
+  font-style:normal;
+  font-weight:bold;
+  color:darkgreen;
+}
+@keyframes win
+{
+  0%
+  {
+    transform:scale(5);
+  }
+  100%
+  {
+    transform:scale(7);
+  }
+}
+#win
+{
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  z-index:1;
+  margin-top:-50px;
+  margin-left:-25px;
+  color:darkred;
+  text-shadow:1px 1px 0 darkgreen;
+  animation:win 1s alternate infinite linear;
+}
+#launch, #inGame
+{
+  display:inline-block;
+  padding:10px 30px 10px 30px;
+  border-radius:5px;
+  border:1px solid black;
+}
+#launch div,
+#inGame div
+{
+  color:red;
+}
+#termo
+{
+  position:relative;
+  margin:0 auto 0 auto;
+  background-image:url('../imgs/termo.png');
+  background-size:cover;
+  width:144px;
+  height:312px;
+}
+#termo div:nth-child(1)
+{
+  position:absolute;
+  bottom:78px;
+  left:78px;
+  background-image:url('../imgs/temp.png');
+  background-repeat:repeat-y;
+  width:14px;
+  height:0;
+  transition:height 1s;
+}
+#termo div:nth-child(2)
+{
+  border:1px solid grey;
+  background-color:lightyellow;
+  position:absolute;
+  top:10px;
+  right:-400px;
+  width:150px;
+  height:290px;
+  transition:height 1s;
+  overflow-y:auto;
+  opacity:0.5;
+  padding:5px;
+  display:none;
+}
+#termo div:nth-child(2) span
+{
+  font-size:0.5em;
+  vertical-align:3px;
+}
+#inGame
+{
+  display:none;
+}
+a
+{
+  display:inline-block;
+  text-decoration:none;
+  font-size:1.2em;
+  color:darkred;
+  background-color:lightblue;
+  border:1px solid black;
+  border-radius:5px;
+  padding:5px;
+  margin:10px auto 10px auto;
+  font-weight:bold;
+}
